@@ -36,6 +36,27 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" href="img/hero1.png" type="image/png" />
+    <style>
+      @keyframes rotateAndDisappear {
+        0%,
+        100% {
+          transform: rotate(0deg);
+          opacity: 1;
+        }
+        25%,
+        75% {
+          transform: rotate(180deg);
+          opacity: 0;
+        }
+        50% {
+          transform: rotate(360deg);
+          opacity: 1;
+        }
+      }
+      .rotate-and-disappear {
+        animation: rotateAndDisappear 5s ease-in-out; /* Adjust duration as needed */
+      }
+    </style>
   </head>
 
   <body>
@@ -54,7 +75,13 @@
         <nav class="navbar navbar-light navbar-expand-lg py-4">
           <a href="index.html" class="navbar-brand">
             <h1 class="text-primary fw-bold mb-0">
-              Prima<span class="text-dark"></span>
+              <img
+              src="img/hero1.png"
+              class="img-fluid rounded animated zoomIn rotate-and-disappear"
+              alt=""
+              height="80px"
+              width="80px"
+            /><span class="text-dark"></span>
             </h1>
           </a>
           <button
